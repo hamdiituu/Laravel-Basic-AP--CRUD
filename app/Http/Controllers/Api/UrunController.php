@@ -15,7 +15,11 @@ class UrunController extends Controller
     public function index() //get all
     {
         $urunler  = Urun::all();
-        return response($urunler,200);
+   
+
+        //return response->json( ['data' => $urunler], 200);
+        return response()->json($urunler,200);
+
     }
 
     /**
